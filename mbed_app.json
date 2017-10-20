@@ -19,6 +19,22 @@
         "wifi-rx": {
             "help": "RX pin for serial connection to external device",
             "value": "D0"
+        },
+        "wifi_miso": {
+            "help": "SPI-MISO connection to external device",
+            "value": "PC_11"
+        },
+        "wifi_mosi": {
+            "help": "SPI-MOSI connection to external device",
+            "value": "PC_12"
+        },
+        "wifi_sclk": {
+            "help": "SPI-CLOCK connection to external device",
+            "value": "PC_10"
+        },
+        "wifi_nss": {
+            "help": "SPI chip select of external device",
+            "value": "PE_0"
         }
     },
     "target_overrides": {
@@ -35,6 +51,12 @@
         "NUCLEO_F401RE": {
             "wifi-tx": "D8",
             "wifi-rx": "D2"
+        },
+        "DISCO_L475VG_IOT1A": {
+            "wifi-miso": "PC_11",
+            "wifi-mosi": "PC_12",
+            "wifi-sclk": "PC_10",
+            "wifi-nss": "PE_0"
         }
     }
 }
