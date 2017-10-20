@@ -28,6 +28,10 @@ OdinWiFiInterface wifi;
 #include "RTWInterface.h"
 RTWInterface wifi;
 
+#elif TARGET_DISCO_L475VG_IOT01A
+#include "ISM43362Interface.h"
+ISM43362Interface wifi(MBED_CONF_APP_WIFI_MOSI, MBED_CONF_APP_WIFI_MISO, MBED_CONF_APP_WIFI_SCLK, MBED_CONF_APP_WIFI_NSS, PE_8, PE_1, PB_12, true);
+
 #else // External WiFi modules
 
 #if MBED_CONF_APP_WIFI_SHIELD == WIFI_ESP8266
